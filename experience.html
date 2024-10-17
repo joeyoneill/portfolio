@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey O'Neill's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <section id="main-header-tags">
+        <div class="header-text-container">
+            <div class="tag-title">
+                Joey O'Neill
+            </div>
+            <div class="tag-subtitle">
+                Big Computer Science Guy!
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/cat-orange-cat.gif" alt="Spinning Orange Cat GIF">
+        </div>
+    </section>
+
+    <section id="about-me" class="about-me-section">
+        <div class="about-me-text">
+            <h4>Developer of Things | GenAI | Python Enthusiast | Tech Consultant @ <span class="cap-blue">Capgemini</span></h4>
+        </div>
+    </section>
+
+    <section id="links" class="links-section">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </section>
+
+    <section id="experience-content">
+        
+        <!--Consultant II Section-->
+        <div class="experience-container">
+            <div class="experience-title-row">
+
+                <div class="experience-title-and-img">
+                    <img src="images/8bit-cap-logo.png" alt="Capgemini Pixel Logo">
+                    <div class="experience-title">
+                        Consultant II
+                    </div>
+                </div>
+
+                <div class="experience-button-capII">
+                    <button onclick="toggleCapIIDetails()">🤔</button>
+                </div>
+            </div>
+
+            <div class="experience-details-capII hidden">
+                <p style="font-size: 17px;">
+                    Capgemini, July 2024 - Present
+                </p>
+                <p>
+                    Columbia, SC
+                </p>
+                <ul class="experience-list">
+                    <li>
+                        Currently working on internal GenAI POCs, and a client engagement Azure .NET Internal Business Application, extending features and scalability concerns.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Consultant I Section-->
+        <div class="experience-container">
+            <div class="experience-title-row">
+
+                <div class="experience-title-and-img">
+                    <img src="images/8bit-cap-logo.png" alt="Capgemini Pixel Logo">
+                    <div class="experience-title">
+                        Consultant I
+                    </div>
+                </div>
+
+                <div class="experience-button-cap">
+                    <button onclick="toggleCapDetails()">🤔</button>
+                </div>
+            </div>
+
+            <div class="experience-details-cap hidden">
+                <p style="font-size: 17px;">
+                    Capgemini, June 2023 - June 2024
+                </p>
+                <p>
+                    Columbia, SC
+                </p>
+                <ul class="experience-list">
+                    <li>
+                        Most notably, with a team of one other, created a LLM-based chat bot web application for a major telecommunications client, integrating Azure AI Hybrid Search for advanced Retriever-Augmented Generation capabilities, and using a private Azure OpenAI GPT instance to ensure the security of sensitive business information.
+                    </li>
+                    <li>
+                        Developed and implemented multiple LLM-based generative AI proof-of-concept (POC) projects for prospective clients, successfully creating a reusable technology stack that has been adopted in subsequent POCs within the Generative AI pod.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Research Assistant Section-->
+        <div class="experience-container">
+            <div class="experience-title-row">
+
+                <div class="experience-title-and-img">
+                    <img src="images/8bit-cofc-logo.png" alt="CofC Pixel Logo">
+                    <div class="experience-title">
+                        Graduate Research Assistant (Applied AI)
+                    </div>
+                </div>
+
+                <div class="experience-button-cofc">
+                    <button onclick="toggleCofcDetails()">🤔</button>
+                </div>
+            </div>
+
+            <div class="experience-details-cofc hidden">
+                <p style="font-size: 17px;">
+                    College of Charleston, August 2020 - May 2022
+                </p>
+                <p>
+                    Charleston, SC
+                </p>
+                <ul class="experience-list">
+                    <li>
+                        3 first-author publications (2 IEEE conference papers, 1 thesis ~ listed in <span href="projects.html">projects</span>).
+                    </li>
+                    <li>
+                        Received NASA's South Carolina Space Grant Consortium's Graduate Research Fellowship to fund my second year of research.
+                    </li>
+                    <li>
+                        Analyzed, cleaned, and transformed multichannel electroencephalogram (EEG) time series data to work with a machine learning data pipeline.
+                    </li>
+                    <li>
+                        Researched and analyzed work in the field to find and create the best solutions to the problems I faced as well as gained valuable information and insight on the topics of and pertaining to that research.
+                    </li>
+                    <li>
+                        Tested the classification accuracy of segmented multivariate time series patterns through the development of different deep neural network model builds.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function toggleCapIIDetails() {
+            var details = document.querySelector('.experience-details-capII');
+            var button = document.querySelector('.experience-button-capII button');
+            details.classList.toggle('hidden');
+            button.textContent = details.classList.contains('hidden') ? '🤔' : '🤓';
+        };
+        function toggleCapDetails() {
+            var details = document.querySelector('.experience-details-cap');
+            var button = document.querySelector('.experience-button-cap button');
+            details.classList.toggle('hidden');
+            button.textContent = details.classList.contains('hidden') ? '🤔' : '🤓';
+        };
+        function toggleCofcDetails() {
+            var details = document.querySelector('.experience-details-cofc');
+            var button = document.querySelector('.experience-button-cofc button');
+            details.classList.toggle('hidden');
+            button.textContent = details.classList.contains('hidden') ? '🤔' : '🤓';
+        };
+    </script>
+</body>
+</html>

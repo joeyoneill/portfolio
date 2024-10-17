@@ -1,0 +1,540 @@
+/* Custom Fonts */
+@font-face {
+    font-family: alkhemikal;
+    src: url(../fonts/Alkhemikal.ttf);
+}
+@font-face {
+    font-family: paskowy;
+    src: url(../fonts/Paskowy.ttf);
+}
+@font-face {
+    font-family: greenscr;
+    src: url(../fonts/Greenscr.ttf);
+}
+@font-face {
+    font-family: pixelmix;
+    src: url(../fonts/pixelmix.ttf);
+}
+
+/* index.css Tags */
+html {
+    background-image: url('../images/space02-edit-grey2.gif');
+    background-repeat: repeat;
+    background-size: auto; /* or specify a size, like background-size: cover; */
+    margin: 0;
+    padding: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    z-index: -1;
+}
+
+/* Main Header Tags Section */
+#main-header-tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tag-title {
+    font-family: greenscr;
+    font-size: 375%;
+    color: white;
+    margin-top: 5%;
+}
+
+.tag-subtitle {
+    font-family: paskowy;
+    color: white;
+    font-size: 275%;
+    margin-top: 1%;
+}
+
+.image-container {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Moving image behind elements */
+.moving-image {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start outside the screen */
+    z-index: -1; /* Send the image behind other elements */
+    width: 100%;
+    height: auto;
+    opacity: 0.7; /* Adjust opacity if needed */
+    animation: moveImage 15s linear infinite;
+}
+#cat-image {
+    cursor: pointer;
+}
+
+/* About Me Section */
+.about-me-section {
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    background-color: black;
+}
+
+.cap-blue {
+    color: #12abdb;
+}
+
+.about-me-text {
+    font-family: greenscr;
+    color: white;
+    text-align: center;
+}
+
+/* Links Section */
+.links-section {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces the links */
+    width: auto; /* Adjust width as needed */
+}
+
+.nav-links a {
+    color: #12abdb; /* Link color */
+    font-family: greenscr; /* Replace with your desired font */
+    font-size: 150%; /* Adjust font size as needed */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Optional: underline links on hover */
+    color: white;
+}
+
+/* Bio Section */
+#bio-section {
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    background-color: black;
+    margin-bottom: 25px;
+    margin-top: 5%;
+}
+.bio-text {
+    color: white;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+.bio-link-image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+.bio-link-image-item {
+    height: 40px;
+    width: 40px;
+}
+
+/* ========================= */
+/* Education Content Section */
+/* ========================= */
+#education-content {
+    margin-top: 5%;
+}
+
+.education-container {
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    background-color: black;
+    margin-bottom: 25px;
+}
+
+.education-title-row {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-title-and-img {
+    display: flex;
+    align-items: center;
+}
+
+.education-title-and-img img {
+    height: 50px;
+    width: 50px;
+}
+
+.education-title {
+    font-family: greenscr;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.education-button button {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: #12abdb;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.education-button button:hover {
+    background-color: #353333;
+}
+
+.education-details-grad {
+    display: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+
+.education-details-grad.hidden {
+    display: none;
+}
+
+.education-details-grad:not(.hidden) {
+    display: block;
+}
+
+.education-details-undergrad {
+    display: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+
+.education-details-undergrad.hidden {
+    display: none;
+}
+
+.education-details-undergrad:not(.hidden) {
+    display: block;
+}
+
+/* ========================== */
+/* Experience Content Section */
+/* ========================== */
+#experience-content {
+    margin-top: 5%;
+}
+
+.experience-container {
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    background-color: black;
+    margin-bottom: 25px;
+}
+
+.experience-title-row {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-title-and-img {
+    display: flex;
+    align-items: center;
+}
+
+.experience-title-and-img img {
+    height: 50px;
+    width: 50px;
+}
+
+.experience-title {
+    font-family: greenscr;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.experience-button button {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: #12abdb;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.experience-button button:hover {
+    background-color: #353333;
+}
+
+.experience-list li {
+    margin-bottom: 5px;
+}
+
+/* Experience Cap Consultant II */
+.experience-button-capII button {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: #12abdb;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.experience-button-capII button:hover {
+    background-color: #353333;
+}
+
+.experience-details-capII {
+    display: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+
+.experience-details-capII.hidden {
+    display: none;
+}
+
+.experience-details-capII:not(.hidden) {
+    display: block;
+}
+
+/* Experience Cap Consultant I */
+
+.experience-button-cap button {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: #12abdb;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.experience-button-cap button:hover {
+    background-color: #353333;
+}
+
+.experience-details-cap {
+    display: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+
+.experience-details-cap.hidden {
+    display: none;
+}
+
+.experience-details-cap:not(.hidden) {
+    display: block;
+}
+
+/* Experience CofC Grad Research Assistant */
+
+.experience-button-cofc button {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: #12abdb;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.experience-button-cofc button:hover {
+    background-color: #353333;
+}
+
+.experience-details-cofc {
+    display: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+
+.experience-details-cofc.hidden {
+    display: none;
+}
+
+.experience-details-cofc:not(.hidden) {
+    display: block;
+}
+
+/* ======================== */
+/* Projects Content Section */
+/* ======================== */
+#projects-content {
+    margin-top: 5%;
+}
+
+.projects-container {
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    background-color: black;
+    margin-bottom: 25px;
+}
+
+.projects-title-row {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects-title {
+    font-family: greenscr;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.projects-list li {
+    margin-bottom: 5px;
+}
+
+.projects-button button {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: #12abdb;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.projects-button button:hover {
+    background-color: #353333;
+}
+
+.projects-details {
+    display: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: greenscr;
+    font-size: 15px;
+}
+
+/* Project 1 */
+#projects-details-1.hidden {
+    display: none;
+}
+#projects-details-1:not(.hidden) {
+    display: block;
+}
+
+/* Project 2 */
+#projects-details-2.hidden {
+    display: none;
+}
+#projects-details-2:not(.hidden) {
+    display: block;
+}
+
+/* Project 3 */
+#projects-details-3.hidden {
+    display: none;
+}
+#projects-details-3:not(.hidden) {
+    display: block;
+}

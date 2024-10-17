@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey O'Neill's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<style>
+     /* Animation for moving image */
+     @keyframes moveImage {
+        0% {
+            left: -100%; /* Image starts off-screen */
+        }
+        100% {
+            left: 100%; /* Image moves across to the other side */
+        }
+    }
+</style>
+<body style="overflow-x: hidden;">
+    <!-- The moving background image -->
+    <img src="images/pixel-clouds.png" class="moving-image" alt="Moving Image">
+
+    <section id="main-header-tags">
+        <div class="header-text-container">
+            <div class="tag-title">
+                Joey O'Neill
+            </div>
+            <div class="tag-subtitle">
+                Big Computer Science Guy!
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/cat-orange-cat.gif" alt="Spinning Orange Cat GIF" id="cat-image" title="Click me >:) !!!">
+        </div>
+    </section>
+
+    <section id="about-me" class="about-me-section">
+        <div class="about-me-text">
+            <h4>Developer of Things | GenAI | Python Enthusiast | Tech Consultant @ <span class="cap-blue">Capgemini</span></h4>
+        </div>
+    </section>
+
+    <section id="links" class="links-section">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </section>
+
+    <section id="bio-section">
+        <div class="bio-text">
+            Hi, I am Joey. Currently a Tech Consultant @ Capgemini - the sole developer on a client engagement: a fortune 500 company's internal generative AI toolkit web application servicing thousands of users daily. Specializing in fullstack engineering, generative AI, and machine learning.
+            <br>
+            <br>
+            Received my undergrad in Computer Information Systems with a minor in Business Information Management at the University of South Carolina (Go Cocks) and my masters in Computer and Information Sciences from a joint program at The Citadel and College of Charleston. In grad school, my research and thesis were in Applied AI - where I developed and tested different deep learning models for the classification of event-related potentials in multivariate time series data.
+            <br>
+            <br>
+            I enjoy being active - love the gym and golfing on weekends (me yelling at an inanimate ball as it rolls right past the hole because the greens are too fast and I didn't aim small). I also enjoy keeping up to date with global events, financial markets, and being social. ENTJ is my male star sign.
+            <br>
+            <br>
+            Here are some links:
+            <br>
+            <br>
+        </div>
+        
+        <div class="bio-link-image-container">
+            <div style="margin-right: 10px;">
+                <a href="https://www.linkedin.com/in/joseph-o-neill-131592164/" target="_blank">
+                    <img src="images/8bit-linkedin-logo.png" alt="linkedin logo" class="bio-link-image-item">
+                </a>
+            </div>
+            <a href="https://www.github.com/joeyoneill" target="_blank">
+                <img src="images/8bit-git-logo.png" alt="github logo" class="bio-link-image-item">
+            </a>
+        </div>
+    </section>
+
+    <!-- Audio element -->
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+        <audio controls autoplay id="audio-player">
+            <source src="audio/missu.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
+<script>
+    const catImage = document.getElementById('cat-image');
+    const audioPlayer = document.getElementById('audio-player');
+
+    catImage.addEventListener('click', function() {
+        audioPlayer.play();
+    });
+</script>
+</html>
